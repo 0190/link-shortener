@@ -12,7 +12,7 @@ def store_urls():
 	url_list.append(request.form['link'])
 	url = url_for('return_link', id=str(len(url_list) - 1))
 	full_url = 'http://127.0.0.1:5000' + url
-	return Markup('<h1>Here\'s your new link!</h1><a href=" %s " > %s </a>') % (url_list[-1], full_url)
+	return Markup('<h1>Here\'s your new link!</h1><a href=" %s " > %s </a>') % (full_url, full_url)
 
 @app.route('/l/<id>')
 def return_link(id=None):
