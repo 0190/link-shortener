@@ -9,7 +9,7 @@ valid_protocols = ['http', 'https']
 def index():
 	return render_template('link_shortener.html')
 
-@app.route('/newlink', methods=['POST']) #fix this
+@app.route('/newlink', methods=['POST'])
 def process_input():
 	link_name = request.form['link']
 	parsed_link = urlparse(link_name)
@@ -25,7 +25,6 @@ def return_link(id=None):
 	try:
 		return redirect(url_list[int(id)])
 	except IndexError:
-		print 'no id', id
 		return render_template('no_page_error.html')
 
 @app.route('/error')

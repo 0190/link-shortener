@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from urlparse import urlparse
 
-host = "http://127.0.0.1:5000/"
+host = 'http://127.0.0.1:5000/'
 valid_protocols = ['http', 'https']
 
 if len(sys.argv) > 1 and sys.argv[1] == ('--host' or '-h'):
@@ -12,9 +12,9 @@ if len(sys.argv) > 1 and sys.argv[1] == ('--host' or '-h'):
 
 links = {'twitter.com': 'Twitter', 'http://google.com': 'Google', \
 		 'http://docs.seleniumhq.org': 'Selenium - Web Browser Automation', \
-		 'www.meetup.com/Selenium-Israel/': 'Selenium Israel (Tel Aviv-Yafo) - Meetup', \
-		 'http://notapageatall.co.il/': 'Problem loading page', \
-		 'ftp://someftp': 'No matter'}
+		 'www.meetup.com/Selenium-Israel/': 'Selenium Israel (Tel Aviv-Yafo) - Meetup'}
+
+bad_links = {'http://notapageatall.co.il/': 'Problem loading page', 'ftp://someftp': 'No matter'}
 
 driver = webdriver.Firefox()
 
@@ -32,4 +32,3 @@ for link in links:
 		assert driver.current_url == host + 'error'
 		parsed_link = urlparse(link)
 		assert parsed_link.scheme not in valid_protocols or not parsed_link.netloc
-
