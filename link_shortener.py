@@ -23,8 +23,11 @@ def process_input():
 @app.route('/l/<id>')
 def return_link(id=None):
 	try:
-		return redirect(url_list[int(id)])
-	except IndexError:
+		index = int(id)
+		print index
+		if index < 0: raise IndexError
+		return redirect(url_list[index])
+	except:
 		return render_template('no_page_error.html')
 
 @app.route('/error')
