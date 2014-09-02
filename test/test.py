@@ -24,7 +24,7 @@ for link in links:
 	text_box.send_keys(link)
 	text_box.submit()
 
-	if driver.current_url == host + 'urls':
+	if driver.current_url == host + 'newlink':
 		shortened_link = driver.find_element_by_partial_link_text('/l/')
 		shortened_link.click()
 		assert links[link] == driver.title
