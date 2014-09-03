@@ -24,7 +24,6 @@ def process_input():
 def return_link(id=None):
 	try:
 		index = int(id)
-		print index
 		if index < 0: raise IndexError
 		return redirect(url_list[index])
 	except:
