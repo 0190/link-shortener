@@ -1,6 +1,6 @@
 # Link Shortener
 
-Basic web application to make your links \"shorter\". Written in Python using [Flask](http://flask.pocoo.org/) and tested with [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/).
+Basic web application to make your links "shorter". Written in Python using [Flask](http://flask.pocoo.org/) and tested with [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/).
 
 The latest version is deployed on [Heroku](http://heroku.com) and is available by [http://short-0190.herokuapp.com/](http://short-0190.herokuapp.com/).
 
