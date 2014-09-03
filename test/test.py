@@ -1,17 +1,11 @@
 import unittest
-import sys
-import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from urlparse import urlparse
 
-#host = 'http://127.0.0.1:5000/'
-host = 'http://short-0190.herokuapp.com/'
+host = 'http://127.0.0.1:5000/'
 valid_protocols = ['http', 'https']
-
-if len(sys.argv) > 1 and sys.argv[1] == ('--host'):
-	host = sys.argv[2]
 
 valid_link = ('http://docs.seleniumhq.org', 'Selenium - Web Browser Automation')
 
