@@ -6,10 +6,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from urlparse import urlparse
 
-host = 'http://127.0.0.1:5000/'
+#host = 'http://127.0.0.1:5000/'
+host = 'http://short-0190.herokuapp.com/'
 valid_protocols = ['http', 'https']
 
-if len(sys.argv) > 1 and sys.argv[1] == ('--host' or '-h'):
+if len(sys.argv) > 1 and sys.argv[1] == ('--host'):
 	host = sys.argv[2]
 
 valid_link = ('http://docs.seleniumhq.org', 'Selenium - Web Browser Automation')
@@ -21,6 +22,9 @@ invalid_ids = [-1, 'doge']
 class LinkShortenerTest(unittest.TestCase):
 	def setUp(self):
 		self.driver = webdriver.Firefox()
+
+	def tearDown(self):
+		self.driver.quit()
 
 	def add_link(self, link):
 		self.driver.get(host)
