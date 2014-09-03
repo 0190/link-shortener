@@ -2,7 +2,7 @@
 
 Basic web application to make your links "shorter". Written in Python using [Flask](http://flask.pocoo.org/) and tested with [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/).
 
-The latest version is deployed on [Heroku](http://heroku.com) and is available by [http://short-0190.herokuapp.com/](http://short-0190.herokuapp.com/).
+The latest version is deployed on [Heroku](http://heroku.com) and is available at [http://short-0190.herokuapp.com/](http://short-0190.herokuapp.com/).
 
 ## How to run locally
 
