@@ -1,11 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 	<title>Link shortener - Error</title>
 </head>
 <body>
-	<h1>There seems to be a problem with your link</h1>
-	<p>Note that we only work with http and https links.</p>
-	<p>Please check the link format and <a href="/">try again</a>.</p>
+	<div id="main_div">
+		<h1>There seems to be a problem with your link</h1>
+		<p>Note that we only work with http and https links.</p>
+		<p>Please check the link format and <a href="/">try again</a>.</p>
+	</div>
 </body>
 </html>

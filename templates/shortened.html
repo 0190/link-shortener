@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 	<title>Link shortener - short link for {{ link }}</title>
 </head>
 <body>
-	<h1>Here's your new link!</h1>
-	<a href="{{ url }}" > {{ url }} </a>
+	<div id="main_div">
+		<h1>Here's your new link!</h1>
+		<a href="{{ url }}" > {{ url }} </a>
+	</div>
 </body>
 </html>
