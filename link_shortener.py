@@ -13,10 +13,11 @@ def index():
 def process_input():
 	link_name = request.form['link']
 	parsed_link = urlparse(link_name)
+	home_url = url_for('index')
 	if parsed_link.scheme in valid_protocols and parsed_link.netloc:
 		url_list.append(link_name)
 		url = url_for('return_link', id=str(len(url_list) - 1), _external=True)
-		return render_template('shortened.html', link=link_name, url=url)
+		return render_template('shortened.html', link=link_name, url=url, home_url=home_url)
 	else:
 		return redirect('/error')
 

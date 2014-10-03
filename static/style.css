@@ -2902,10 +2902,14 @@ td {
   padding: 0; }
 
 div#main_div {
-  margin: 150px auto;
+  margin: 150px auto 30px;
   width: 35%;
   text-align: center; }
 
+div#secondary {
+  margin: auto;
+  height: 25px;
+  text-align: center; }
 
 /* Default Link Styles */
 a {
