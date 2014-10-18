@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, Markup
 from urlparse import urlparse
 
+import newrelic.agent
+newrelic.agent.initialize('newrelic.ini')
+
 app = Flask(__name__)
 url_list = ['http://ogoloda.li']
 valid_protocols = ['http', 'https']
